@@ -1,0 +1,35 @@
+ScreenManagement:
+    MainScreen:
+    CalculatorScreen:
+    GraphScreen:
+
+<MainScreen>:
+    canvas.before:
+        Color:
+            rgb: .13, .17, .18, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    name: 'main'
+    FloatLayout:
+
+        Button:
+            text: 'Go to Calculator'
+            size_hint: 1, .1
+            pos: 0, 0
+            background_normal: ''
+            background_color: .2, .24, .26, 1
+            on_release: app.root.current = 'calc'
+
+<CalculatorScreen>:
+    name: 'calc'
+    canvas.before:
+        Color:
+            rgb: .13, .17, .18, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    MyGrid
+
+<GraphScreen>:
+    name: 'graph'

@@ -1,0 +1,129 @@
+<GridLayout>:
+    id: Rational
+    rows: 10
+    padding: 7
+    a1: a
+    b1: b
+    c1: c
+    d1: d
+    factorsOfC: FactorsOfC
+    factorsOfA: FactorsOfA
+    possibleRoots: PossibleRoots
+    roots: Roots
+    caseOfRoots: CaseOfRoots
+
+
+    BoxLayout:
+
+        TextInput:
+            multiline: True
+            id: a
+            font_size: 32
+
+        TextInput:
+            multiline: True
+            id: b
+            font_size: 32
+
+        TextInput:
+            id: c
+            multiline: True
+            font_size: 32
+
+    BoxLayout:
+
+        Button:
+            text: 'Main Menu'
+            background_normal: ''
+            background_color: .2, .24, .26, 1
+            on_release: app.root.current = 'main'
+        Button:
+            text: 'Submit'
+            id: display_answer_button
+            background_normal: ''
+            background_color: .2, .24, .26, 1
+            on_press: root.StoreVariables()
+            on_press: root.Polynomial()
+            on_release: root.ShowPolynomial()
+            on_release: root.ClearAll()
+
+        Button:
+            text: 'Graph'
+            id: display_graph_button
+            background_normal: ''
+            background_color: .2, .24, .26, 1
+            on_release: root.ShowGraph()
+
+    BoxLayout:
+        Label:
+            text: ''
+            id: d
+            background_normal: ''
+            background_color: .2, .24, .26, 1
+
+    BoxLayout:
+
+        Button:
+            text: 'Factors of C:'
+            background_normal: ''
+            background_color: .2, .24, .26, 1
+
+        Button:
+            multiline: True
+            id: FactorsOfC
+            background_normal: ''
+            background_color: .2, .24, .26, 1
+
+    BoxLayout:
+
+        Button:
+            text: 'Factors of A:'
+            background_normal: ''
+            background_color: .2, .24, .26, 1
+            multiline: True
+
+        Button:
+            multiline: True
+            id: FactorsOfA
+            background_normal: ''
+            background_color: .2, .24, .26, 1
+
+    BoxLayout:
+
+        Button:
+            text: 'Possible Roots:'
+            background_normal: ''
+            background_color: .2, .24, .26, 1
+
+        Button:
+            multiline: True
+            id: PossibleRoots
+            background_normal: ''
+            background_color: .2, .24, .26, 1
+            multiline: True
+
+    BoxLayout:
+
+        Button:
+            text: 'Roots:'
+            background_normal: ''
+            background_color: .2, .24, .26, 1
+
+        Button:
+            multiline: True
+            id: Roots
+            background_normal: ''
+            background_color: .2, .24, .26, 1
+
+    BoxLayout:
+
+        Button:
+            text: 'Case of Roots:'
+            background_normal: ''
+            background_color: .2, .24, .26, 1
+
+        Button:
+            multiline: True
+            id: CaseOfRoots
+            background_normal: ''
+            background_color: .2, .24, .26, 1
